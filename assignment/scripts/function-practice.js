@@ -88,20 +88,32 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll( array ) {
-  let sum = 0
+  let sum = 0;
   // TODO: loop to add items
   for(let i = 0; i < array.length; i++) {
-    sum = sum + array[i];
+    sum += array[i];
   }
   return sum;
 }
-crazyArray = [100, 5, 0.25];
+crazyArray = [100, 5, 0.25, -5];
 console.log(sumAll(crazyArray));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-
+function positiveArray ( array ) {
+  let newArray = [];
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] > 0) {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
+}
+let positiveNumbers = [-1, -4, 5, 0, -100009, 100, 24];
+let noPositiveNumbers = [-1, -5, 0, -200];
+console.log('The positive numbers of positiveNumbers is/are:', positiveArray(positiveNumbers));
+console.log('The positive numbers of noPositiveNumbers is/are:', positiveArray(noPositiveNumbers));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 

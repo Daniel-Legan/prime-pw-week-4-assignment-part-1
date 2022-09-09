@@ -90,8 +90,8 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 function sumAll( array ) {
   let sum = 0;
   // TODO: loop to add items
-  for(let i = 0; i < array.length; i++) {
-    sum += array[i];
+  for(let n of array) {
+    sum += n;
   }
   return sum;
 }
@@ -110,8 +110,8 @@ function positiveArray ( array ) {
   }
   return newArray;
 }
-let positiveNumbers = [-1, -4, 5, 0, -100009, 100, 24];
-let noPositiveNumbers = [-1, -5, 0, -200];
+let positiveNumbers = [-1, -4, 5, 0, -100009, 100, 24]; //example
+let noPositiveNumbers = [-1, -5, 0, -200]; //example
 console.log('The positive numbers of positiveNumbers is/are:', positiveArray(positiveNumbers));
 console.log('The positive numbers of noPositiveNumbers is/are:', positiveArray(noPositiveNumbers));
 
@@ -119,3 +119,29 @@ console.log('The positive numbers of noPositiveNumbers is/are:', positiveArray(n
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+/*Create a function which returns the number of true values there are in an array.*/
+/*
+countTrue([true, false, false, true, false]) ➞ 2
+
+countTrue([false, false, false, false]) ➞ 0
+
+countTrue([]) ➞ 0
+
+Notes
+Return 0 if given an empty array.
+All array items are of the type bool (true or false).
+*/
+
+
+let trueOrFalse = [true, false, true, false, false, false, false, false, true, true, false]; //4
+let emptyArray = []; //return 0
+function countTrue(values) {
+  let count = 0;
+  for ( let n of values ) {
+    count += n;
+  }
+  return count;
+}
+console.log(countTrue(trueOrFalse));
+console.log(countTrue(emptyArray));
